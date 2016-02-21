@@ -6,8 +6,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RadioButton;
+
+import java.util.ArrayList;
 
 public class ProfileActivity extends AppCompatActivity implements View.OnClickListener{
+
+
+    RadioButton button[] = new RadioButton[10];
+
 
     private Button btnGoPre;
     @Override
@@ -17,8 +24,19 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-//        btnGoPre = (Button)findViewById(R.id.GotoPre);
-//        btnGoPre.setOnClickListener(this);
+        btnGoPre = (Button)findViewById(R.id.logout);
+        btnGoPre.setOnClickListener(this);
+
+        button[0] = (RadioButton)findViewById(R.id.radioButton1);
+        button[1] = (RadioButton)findViewById(R.id.radioButton2);
+        button[2] = (RadioButton)findViewById(R.id.radioButton3);
+        button[3] = (RadioButton)findViewById(R.id.radioButton4);
+        button[4] = (RadioButton)findViewById(R.id.radioButton5);
+        button[5] = (RadioButton)findViewById(R.id.radioButton6);
+        button[6] = (RadioButton)findViewById(R.id.radioButton7);
+        button[7] = (RadioButton)findViewById(R.id.radioButton8);
+        button[8] = (RadioButton)findViewById(R.id.radioButton9);
+        button[9] =(RadioButton)findViewById(R.id.radioButton10);
 
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {
@@ -30,9 +48,25 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
 //        });
     }
 
+    public void setText(ArrayList<String> list)
+    {
+        for(int i =0; i<list.size(); i++)
+        {
+            button[i].setText(list.get(i));
+        }
+    }
+
+    public String getButtonText(int i)
+    {
+        if(0<=i && i<=10)
+            return button[i].getText().toString();
+        else
+            return "Wrong input";
+    }
+
     @Override
     public void onClick(View v) {
-        Intent intent = new Intent(this, PreferenceActivity.class);
+        Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
     }
 }

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.SeekBar;
@@ -477,30 +478,6 @@ public class PreferenceActivity extends AppCompatActivity implements View.OnClic
             }
         });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -517,10 +494,8 @@ public class PreferenceActivity extends AppCompatActivity implements View.OnClic
         int []values = {seekProgress1, seekProgress2, seekProgress3, seekProgress4,
                 seekProgress5,seekProgress6,seekProgress7,seekProgress8,seekProgress9,
                 seekProgress10, seekProgress11, seekProgress12};
+
         intent.putExtra("values", values);
         startActivity(intent);
     }
-
-
-
 }

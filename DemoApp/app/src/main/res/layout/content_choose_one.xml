@@ -23,12 +23,6 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="1ST Option"
-                android:id="@+id/button"
-                android:layout_weight="1" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -38,6 +32,13 @@
                 android:id="@+id/textView2"
                 android:layout_weight="5"
                 android:gravity="fill" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="find else"
+                android:id="@+id/button"
+                android:layout_weight="1" />
 
         </LinearLayout>
 
@@ -53,7 +54,9 @@
                 android:adjustViewBounds="true"
                 android:cropToPadding="true"
                 android:scaleType="centerCrop"
-                android:src="@drawable/food1" />
+                android:src="@drawable/food1"
+                android:onClick="onClick"
+                android:nestedScrollingEnabled="false" />
 
         </FrameLayout>
 
@@ -61,12 +64,6 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="2ND OPTION"
-                android:id="@+id/button2"
-                android:layout_weight="1" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -80,12 +77,10 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="@string/next"
-                android:id="@+id/GotoRes"
-                android:layout_centerVertical="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
+                android:text="find else"
+                android:id="@+id/button2"
                 android:layout_weight="1" />
+
         </LinearLayout>
 
         <FrameLayout
@@ -100,7 +95,8 @@
                 android:adjustViewBounds="true"
                 android:cropToPadding="true"
                 android:scaleType="centerCrop"
-                android:src="@drawable/food2" />
+                android:src="@drawable/food2"
+                android:onClick="onClick2" />
 
         </FrameLayout>
 
